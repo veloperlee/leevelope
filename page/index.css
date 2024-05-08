@@ -1,0 +1,117 @@
+html , body{
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer{
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+main{
+    width: 80%;
+}
+
+/* nav button{
+    font-size: 18px;
+    padding: 0px 10px;
+} */
+
+/* 버튼 all border */
+/* nav button {
+    background-color: #fff;
+    border: 1px solid transparent; 
+    font-size: 18px;
+    padding: 10px;
+    transition: border-bottom-color 0.5s linear, border-left-color 0.7s linear, border-top-color 1s linear, border-right-color 1.2s ease-in;
+}
+
+nav button:hover {
+    border-bottom-color: black;
+    transition-delay: 0.1s; 
+    border-left-color: black;
+    transition-delay: 0.1s; 
+    border-top-color: black;
+    transition-delay: 0.1s; 
+    border-right-color: black;
+} */
+
+nav button {
+    background-color: #fff;
+    border: 1px solid transparent; 
+    font-size: 18px;
+    padding: 10px;
+    transition: border-bottom-color 0.5s linear; /
+}
+
+nav button:hover {
+    border-bottom-color: black;
+    transition-delay: 0.1s; 
+}
+
+section{
+    position: sticky;
+    box-shadow: 0px -10px 15px 3px rgba(0,0,0,0.3);
+    /* background-color: #ccc; */
+    background-color: #fff;
+}
+
+section#home{
+    height: calc(100vh - 90px);
+    /* height: 100vh; */
+    top: 90px;
+}
+
+section#about{
+    height: calc(100vh - 150px);
+    top: 150px;
+}
+
+section#job{
+    height: calc(100vh - 210px);
+    top: 210px;
+}
+
+section#contact{
+    height: calc(100vh - 270px);
+    top: 270px;
+}
+
+section div.button{
+    cursor: pointer;
+    display: inline-block;
+    border: 3px solid #000;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 20px;
+}
+
+
+
+
+
+
+
+
+/* job */
+.job_wrap{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* .job_job{
+
+} */

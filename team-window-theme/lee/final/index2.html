@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="runner run1"><img src="runner.svg" alt=""></div>
+        <div class="runner run2"><img src="runner.svg" alt=""></div>
+        <div class="runner run3"><img src="runner.svg" alt=""></div>
+    </div>
+</body>
+
+<script>
+        fetch("./a.json")
+  .then((response) => response.json())
+  .then((data) => console.log(data.runner[0].speed))
+  .catch(error => console.log(error));
+
+    const run1 = document.querySelector(".run1 img");
+    const run2 = document.querySelector(".run2 img");
+    const run3 = document.querySelector(".run3 img");
+
+    let walk1 = 0;
+    let walk2 = 0;
+    let walk3 = 0;
+
+    function runner1(){
+        walk1++;
+        run1.style.left = `${data.runner[0].speed}px`;
+        console.log(data.runner[0].speed);
+    }
+    function runner2(){
+        walk2 += 10;
+        run2.style.left = `${walk2}px`;
+    }
+    function runner3(){
+        walk3 += 30;
+        run3.style.left = `${walk3}px`;
+    }
+
+    run1.addEventListener("click",runner1);
+    run2.addEventListener("click",runner2);
+    run3.addEventListener("click",runner3);
+
+</script>
+
+</html>

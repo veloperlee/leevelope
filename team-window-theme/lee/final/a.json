@@ -1,0 +1,25 @@
+{
+    "runner": [
+        {
+            "id": 1,
+            "title": "runner.svg",
+            "speed": "15"
+        },
+        {
+            "id": 2,
+            "title": "runner.svg",
+            "speed": "60"
+        },
+        {
+            "id": 3,
+            "title": "runner.svg",
+            "speed": "40"
+        },
+        {
+            "id": 4,
+            "title": "runner.svg",
+            "speed": "70"
+        }
+    ]
+}
+

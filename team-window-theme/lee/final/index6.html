@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .wrap{
+        width: 100%;
+        height: 300px;
+        background-color: cadetblue;
+    }
+    
+    .wrap .runner{
+        position: relative;
+        display: block;
+        padding-bottom: 50px;
+    }
+    
+    .wrap .runner img{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+    </div>
+</body>
+
+<script>
+    
+    fetch("./a.json")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data.runner);
+
+    const wrap = document.querySelector(".wrap");
+    for(let j=0; j<data.runner.length; j++){
+        const runner = document.createElement("div");
+        const img = document.createElement("img");
+        runner.className = "runner";
+        img.src = "runner.svg";
+        wrap.appendChild(runner);
+        runner.appendChild(img);
+
+        let run = document.querySelectorAll(".runner img");
+        function go(){
+            
+            for(let i=0; i<run.length; i++){
+                let walk = 0;
+                run[i].addEventListener("click", function () {
+                    if(i==0){
+                        walk += data.runner[0].speed;
+                    }else if(i==1){
+                        walk += data.runner[1].speed;
+                    }else if(i==2){
+                        walk += data.runner[2].speed;
+                    }else{
+                        walk += data.runner[3].speed;
+                    }
+                    run[i].style.left = `${walk}px`;
+                });
+            }
+        }
+        go();
+    }
+  })
+  .catch(error => console.log(error));
+
+    
+</script>
+
+
+</html>

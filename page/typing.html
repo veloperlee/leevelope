@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Effect</title>
+    <style>
+        #typing-text {
+            font-size: 24px;
+            border-right: 2px solid #000; /* 타이핑 효과를 나타낼 테두리 */
+            white-space: nowrap; /* 줄 바꿈 방지 */
+            overflow: hidden; /* 넘치는 텍스트 숨김 */
+        }
+    </style>
+</head>
+<body>
+
+<div id="typing-text"></div>
+
+<script>
+    const textToType = "Hello, World!"; // 타이핑할 텍스트
+    const typingSpeed = 100; // 타이핑 속도 (밀리초 단위)
+
+    let currentCharacter = 0;
+    const typingElement = document.getElementById("typing-text");
+
+    function typeText() {
+        typingElement.textContent += textToType[currentCharacter];
+        currentCharacter++;
+
+        if (currentCharacter === textToType.length) {
+            clearInterval(typingInterval); // 모든 텍스트가 타이핑되면 인터벌 정지
+        }
+    }
+
+    const typingInterval = setInterval(typeText, typingSpeed);
+</script>
+
+</body>
+</html>

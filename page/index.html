@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leevelope</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Leevelope</h1>
+        <!-- <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#job">Job/Skill</a>
+            <a href="#contact">Contact</a>
+        </nav> -->
+        <nav>
+            <button class="button" data-scroll-target="0">Home</button>
+            <button class="button" data-scroll-target="749">About</button>
+            <button class="button" data-scroll-target="1495">Job/Skill</button>
+            <button class="button" data-scroll-target="2193">Contact</button>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- <section><div id="home">Home</div></section>
+        <section><div id="about">About</div></section>
+        <section><div id="job">Job/Skill</div></section>
+        <section><div id="contact">Contact</div></section> -->
+        <section id="home">
+            <div class="button" data-scroll-target="0"></div>
+        </section>
+        <section id="about">
+            <div class="button" data-scroll-target="749"></div>
+        </section>
+        <section id="job">
+            <div class="button" data-scroll-target="1495"></div>
+            <div class="job_wrap">
+                <div class="job_job">
+                    <table>
+                        <thead>
+                            <th>경력사항</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023 ~ </td>
+                                <td>니트로아이</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="job_skill">
+                    <table>
+                        <thead>
+                            <th>Skill</th>
+                            <th>%</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HTML</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>CSS</td>
+                                <td>65</td>
+                            </tr>
+                            <tr>
+                                <td>JS</td>
+                                <td>40</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="button" data-scroll-target="2193"></div>
+        </section>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>

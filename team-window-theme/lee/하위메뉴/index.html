@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하위메뉴 연습중</title>
+    <!-- <link rel="stylesheet" href="http://ggcf-cloud.ggcf.kr/content/css/reset.css"> -->
+    <style>
+        /* body *{
+            outline: 1px solid black;
+        } */
+        ul {
+            margin: 0px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .wrap {
+            padding: 0 40px;
+        }
+
+        h1 {
+            font-size: 48px;
+            padding: 40px 0px;
+            border-bottom: 1px solid #000;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between
+        }
+
+        section {
+            width: 60%;
+        }
+
+        aside {
+            width: 30%;
+        }
+
+        aside>div,
+        aside>li {
+            text-align: center;
+        }
+
+        .menu-box {
+            border-right: 1px solid black;
+            padding: 20px 0px;
+        }
+
+        .menu-box>ul>li {
+            width: 75%;
+        }
+
+        .aside-wrap {
+            padding: 20px 40px;
+        }
+
+        .aside-wrap>div {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .aside-wrap li {
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 1px solid gray;
+        }
+
+        .aside-wrap li .show {
+            height: 100px;
+        }
+
+        .aside-wrap ul {
+            padding: 0px;
+        }
+
+        .input-title {
+            padding-bottom: 10px;
+        }
+
+        .input-box {
+            height: 0px;
+            overflow: hidden;
+            transition: 0.5s ease;
+        }
+
+        .menu-list>li>div {
+            cursor: default;
+            font-size: 20px;
+
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .menu-list ul {
+            height: 0px;
+            overflow: hidden;
+            transition: 0.5s ease;
+        }
+
+        /* .menu-list ul.show {
+            height: 150px;
+        } */
+
+        .menu-list li {
+            padding: 5px;
+        }
+
+        .menu-list>li>ul>li {
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="wrap">
+        <h1>메뉴</h1>
+        <main>
+            <section class="menu-box">
+                <ul class="menu-list">
+                    <li>
+                        <div>엄</div>
+                        <ul>
+                            <li>어떻게</li>
+                            <li>사람</li>
+                            <li>이름이</li>
+                            <li>ㅋㅋ</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div>준</div>
+                        <ul>
+                            <li>점심</li>
+                            <li>퇴근</li>
+                            <li>금요일</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div>식</div>
+                        <ul>
+                            <li>오늘</li>
+                            <li>점심</li>
+                            <li>뭐먹지</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </section>
+            <aside>
+                <section class="aside-wrap">
+                    <div>메뉴를 추가하세요</div>
+                    <ul>
+                        <li>
+
+                            <form method="post" action="https://enqcf2dgfx6rc.x.pipedream.net">
+                                <!-- <form method="get"> -->
+                                <div class="input-title">링크</div>
+                                <div class="input-box">
+                                    <input type="text" name="link" placeholder="링크를 입력해주세요">
+                                    <input type="text" name="name" placeholder="링크명을 입력해주세요">
+                                    <button>등록</button>
+                                </div>
+                            </form>
+                        </li>
+                        <li>
+                            <form method="get">
+                                <div class="input-title">페이지</div>
+                                <div class="input-box">
+                                    <input type="text" placeholder="페이지를 입력해주세요">
+                                    <input type="text" placeholder="페이지명를 입력해주세요">
+                                    <button>등록</button>
+                                </div>
+                            </form>
+                        </li>
+                        <li>
+                            <form method="get">
+                                <div class="input-title">게시판</div>
+                                <div class="input-box">
+                                    <input type="text" placeholder="게시판명을 입력해주세요">
+                                    <input type="text" placeholder="게시판설명을 입력해주세요">
+                                    <button>등록</button>
+                                </div>
+                            </form>
+                        </li>
+                        <li>
+                            <!-- <form method="get"> -->
+                            <form method="post" action="https://enqcf2dgfx6rc.x.pipedream.net">
+                                <div class="input-title">프로그램</div>
+                                <div class="input-box">
+                                    <input type="file" placeholder="프로그램을 등록해주세요">
+                                    <button>등록</button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+        </main>
+    </section>
+    <script>
+        // ul.show>li 갯수만큼 ul.show 메뉴 높이값 자동화
+        for (const listButton of document.querySelectorAll(".menu-list>li>div")) {
+            listButton.addEventListener('click', function () {
+                const ul = listButton.parentElement.querySelector(":scope > ul");
+                ul.classList.toggle("show");
+
+                if (ul.classList.contains("show")) {
+                    const liItems = ul.querySelectorAll("li");
+                    const liHeight = 35; // li 높이값
+                    const newHeight = liItems.length * liHeight;
+                    ul.style.height = `${newHeight}px`;
+                } else {
+                    ul.style.height = "0px";
+                }
+            });
+        }
+
+
+        // aside
+        const aside = document.querySelectorAll(".aside-wrap li");
+
+        for (let i = 0; i < aside.length; i++) {
+            document.querySelectorAll(".input-title")[i].addEventListener('click', function () {
+                document.querySelectorAll('.input-box')[i].classList.toggle("show");
+            })
+        }
+
+        // aside 공백 체크
+        const checkBox = function () {
+            let buttonCheck = document.querySelectorAll("button");
+
+            // let input = document.querySelectorAll("input");
+
+            for (let i = 0; i < buttonCheck.length; i++) {
+                buttonCheck[i].addEventListener('click', function (event) {
+                    const form = buttonCheck[i].closest("form");
+                    const input = form.querySelectorAll("input");
+
+                    for (let j = 0; j < input.length; j++) {
+                        if (input[j].value == "") {
+                            event.preventDefault();
+                            alert("똑바로 써라");
+                            return;
+                        }
+                    }
+                })
+            }
+        }
+
+        checkBox();
+
+
+
+    </script>
+</body>
+
+</html>

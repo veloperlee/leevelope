@@ -1,0 +1,17 @@
+{
+    "runner": [
+        {
+            "id": 1,
+            "title": "runner1.svg"
+        },
+        {
+            "id": 2,
+            "title": "runner2.svg"
+        },
+        {
+            "id": 3,
+            "title": "runner3.svg"
+        }
+    ]
+}
+

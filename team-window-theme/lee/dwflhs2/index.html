@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a {
+        position: relative;
+        text-decoration-line: none;
+        display: block;
+        border-radius: 10px 10px;
+        background-color: #f3f3f3;
+        padding: 30px;
+    }
+
+    a:hover {
+        background-color: #69a2e2;
+        background-image: url('img/bg_deco.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .cont2-title {
+        color: #555555;
+        font-size: 20px;
+    }
+
+    .cont2-inner,
+    .cont2-bottom {
+        color: #444444;
+        font-size: 35px;
+    }
+
+    a:hover .cont2-title,
+    a:hover .cont2-bottom {
+        color: #ffffff;
+    }
+
+    a:hover .cont2-inner {
+        color: #fcffa5;
+    }
+
+    .cont2-inner,
+    .cont2-bottom,
+    .cont2-ment,
+    .cont2-go {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .cont2-go {
+        width: 53px;
+        height: 26px;
+        background-image: url("img/arrow.png");
+        background-repeat: no-repeat;
+    }
+
+    a:hover .cont2-go {
+        background-image: url("img/arrow_on.png");
+    }
+
+    .cont2-icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .cont2-wrap {
+        display: flex;
+    }
+
+    .cont2-ment {
+        color: #d8e8fb;
+        width: 0;
+        overflow: hidden;
+        transition: all ease 0.2s;
+        font-size: 17px;
+        color: #d8e8fb;
+        height: 26px;
+    }
+
+    a:hover .cont2-ment {
+        width: 70px;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="list">
+            <a href="">
+                <div class="cont2-title">대원외고 2023학년도</div>
+                <div class="cont2-inner">입학설명회</div>
+                <div class="cont2-bottom">예약</div>
+                <div class="cont2-wrap">
+                    <div class="cont2-ment">바로가기</div>
+                    <div class="cont2-go"></div>
+                </div>
+                <div class="cont2-icon"><img src="./img/1.png" alt="아이콘입니다"></div>
+            </a>
+            <a href="">
+                <div class="cont2-title">대원외고 2023학년도</div>
+                <div class="cont2-inner">상시 전편입학</div>
+                <div class="cont2-bottom">모집</div>
+                <div class="cont2-wrap">
+                    <div class="cont2-ment">바로가기</div>
+                    <div class="cont2-go"></div>
+                </div>
+                <div class="cont2-icon"><img src="./img/2.png" alt="아이콘입니다"></div>
+            </a>
+            <a href="">
+                <div class="cont2-title">대원외고 2024학년도</div>
+                <div class="cont2-inner">신입생</div>
+                <div class="cont2-bottom">모집안내</div>
+                <div class="cont2-wrap">
+                    <div class="cont2-ment">바로가기</div>
+                    <div class="cont2-go"></div>
+                </div>
+                <div class="cont2-icon"><img src="./img/3.png" alt="아이콘입니다"></div>
+            </a>
+            <a href="">
+                <div class="cont2-title">대원외고 2024학년도</div>
+                <div class="cont2-inner">신규교사</div>
+                <div class="cont2-bottom">모집</div>
+                <div class="cont2-wrap">
+                    <div class="cont2-ment">바로가기</div>
+                    <div class="cont2-go"></div>
+                </div>
+                <div class="cont2-icon"><img src="./img/4.png" alt="아이콘입니다"></div>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>

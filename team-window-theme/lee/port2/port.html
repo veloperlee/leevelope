@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<style>
+    html,
+    body,
+    h1,
+    ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    header {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .move {
+        display: flex;
+    }
+
+    header>div>a {
+        display: flex;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 슬라이드 아이템 스타일 */
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background-color: #eee;
+    }
+</style>
+
+<body>
+    <header>
+        <div>이정우</div>
+        <div class="move">
+            <a href="#section1">about me</a>
+            <a href="#section2">skill</a>
+            <a href="#section3">career</a>
+            <!-- <a href="section4"></a> -->
+        </div>
+    </header>
+    <main>
+        <section id="section1">about me</section>
+        <section id="section2">skill</section>
+        <section id="section3">career</section>
+        <section>
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="runner.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="runner.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="runner.svg" alt="">
+                    </div>
+                </div>
+
+                <!-- 페이징 필요시 추가 -->
+                <div class="swiper-pagination"></div>
+                <!-- 이전, 다음 버튼 필요시 추가 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- 스크롤 필요시 추가 -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+<script>
+    // Swiper 인스턴스 생성
+    var mySwiper = new Swiper('.swiper-container', {
+        // 옵션 설정
+        slidesPerView: 1, // 한 번에 표시할 슬라이드 개수
+        spaceBetween: 10, // 슬라이드 간 간격
+        // pagination 설정 (페이징)
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // 페이징을 클릭하여 이동 가능하도록 설정
+        },
+        // navigation 설정 (네비게이션 버튼)
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000, // 각 슬라이드 간의 자동 재생 딜레이 (ms)
+            disableOnInteraction: false, // 사용자 상호 작용 시 자동 재생 비활성화 여부
+            pauseOnMouseEnter: true, // 마우스 오버시 자동재생 일시정지
+            loop: true, // 자동재생
+        },
+        speed: 1000 // 이동속도
+    });
+
+
+</script>
+
+</html>
